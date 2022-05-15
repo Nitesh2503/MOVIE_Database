@@ -7,9 +7,9 @@ public class create_table {
 		try {
 		Class.forName("org.sqlite.JDBC");
 		conn = DriverManager.getConnection("jdbc:sqlite:/C:\\Users\\nitesh\\OneDrive\\Desktop\\sqlite\\moviedb.db");
-		System.out.println("Database Opened...\n");
+		System.out.println("<<..Database Opened..>>\n");
 		stmt = conn.createStatement();
-		String sql = "CREATE TABLE MOVIE_DB " +
+		String sql = "CREATE TABLE movie_table " +
 		"(p_id INTEGER PRIMARY KEY AUTOINCREMENT," +
 		" movie_name TEXT NOT NULL, " +
 		" lead_actor TEXT NOT NULL, " +
@@ -24,6 +24,6 @@ public class create_table {
 		System.err.println( e.getClass().getName() + ": " + e.getMessage() );
 		System.exit(0);
 		}
-		System.out.println("Table MOVIE_DB Created Successfully!!!");
+		System.out.println("Table movie_table Created Successfully!!!");
 		}
 	}
