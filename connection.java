@@ -10,7 +10,6 @@ public class connection {
 	static Statement statement;
 	connection()
 	{
-		System.out.println("DD");
    	     String Url="jdbc:sqlite:/C:\\Users\\nitesh\\OneDrive\\Desktop\\sqlite\\moviedb.db";
    	     try
    	     {
@@ -31,19 +30,19 @@ public class connection {
     	 boolean flag=true;
     	 do
     	 {   Scanner obj=new Scanner(System.in);
-    		 System.out.println("Enter your choice ");
-        	 System.out.println("1.Insert Data in Table\n2.Display complete data\n3.Display data of particular Actors\n4.Drop the table\n5.Exit");
-        	 int choice=5;
+    		 System.out.println("Enter your choice :");
+        	 System.out.println("1.Insert Data in Table\n2.Display complete data\n3.Display data of particular Actor\n4.Drop the table\n5.Exit");
+        	 int ch=5;
         	 try
         	 {
-        		 choice=obj.nextInt();
+        		 ch=obj.nextInt();
         	 }
         	 catch(Exception e)
         	 {
         		 System.out.println("Please Enter valid datatype");
 //        		 e.printStackTrace();
         	 }
-        	 switch(choice)
+        	 switch(ch)
         	 {
         	 case 1:insert();
         	 break;
@@ -75,8 +74,7 @@ public class connection {
 		 }
 		 catch(SQLException e)
 		 {
-			 System.out.println("Table Not Created : ERROR");
-//			 System.exit(0);
+			 System.out.println("Table Is Not Created--ERROR");
 			 e.printStackTrace();
 		 }
     	 return ;
