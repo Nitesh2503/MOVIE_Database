@@ -55,7 +55,8 @@ public class connection {
         		 db.droptable();
         		 break;
         	 case 5:
-        		 System.out.println("Please Enter a Valid operation type");
+        		 System.out.println("EXITED !!");
+        		 System.exit(0);
         		 break;
         	 }
     	 }while(flag==true);
@@ -185,7 +186,7 @@ public class connection {
     	 {
     		 statement.executeUpdate(q);
     		 System.out.println("Table Dropped");
-    		 System.out.println("---------Program Ends--------");
+    		 System.out.println("--------- !!Program Ends!!--------");
     	 }
     	 catch(SQLException e)
     	 {
@@ -194,6 +195,3 @@ public class connection {
     	 }
      }
 }
-
-
-
